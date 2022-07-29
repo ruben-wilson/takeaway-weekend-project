@@ -211,35 +211,7 @@ checkout.basket #=> "chicken and rice, sausage and mash"
 ```
 
 ## 4. Create Examples as Unit Tests
-
-_Create examples, where appropriate, of the behaviour of each relevant class at
-a more granular level of detail._
-
 ```ruby
-class CheckOut
-  def input_menu(meals)#=> meals is a instance of meal 
-    #=> creates a "menu" array of meals 
-  end 
-  def menu
-
-    # returns meal description + price from meal array
-  end 
-  def basket
-    #returns contents of basket as string 
-  end
-  def add_to_basket(meal) #meal is an instance of meal 
-
-    #returns array of meal instances that user has #selected 
-  end
-  def remove_from_basket(meal)
-    #=> removes meal from basket
-  end 
-  def receipt
-   #@basket is an array of meals created by add_to_basket
-   #returns dishes from basket with discription + price 
-  end 
-end 
-
 # EXAMPLE
 _meal_
 #1 it initalizes corretly and returns description 
@@ -307,10 +279,10 @@ _Encode each example as a test. You can add to the above list as you go._
 ## 5. Implement the Behaviour
 
 _After each test you write, follow the test-driving process of red, green,
-refactor to implement the behaviour._
+refactor to implement the behavior._
 
 ## 6. test edge cases in unit test 
 
 
 
-## 7. test edge cases in intergration test
+## 7. test edge cases in integration test
