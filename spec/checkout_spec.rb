@@ -1,4 +1,6 @@
 require "checkout"
+require 'twilio_mock'
+
 
 RSpec.describe CheckOut do 
   it "#1 input_menu() adds meal instances and menu() returns it" do 
@@ -70,6 +72,21 @@ RSpec.describe CheckOut do
     checkout.add_to_basket(meal)
     checkout.add_to_basket(meal2)
     expect(checkout.receipt).to eq "some meal: £11.50, some more meals: £31.50"
+  end
+  it "#7 texts are correctly formatted before being sent" do
+   TwilioMock::Testing.disable!
+    mocker = TwilioMock::Mocker.new
+    attrs = {
+      from: '+19787170234',
+      to: '+447722160086',
+      body: "your food will arrive in 14:23",
+    }
+    mocker.create_message(attrs)
+    account.messages.create(attrs)
+
+    expect(mocker.messages.last).to eq "your food will arrive in 14:23"
+
+    TwilioMock::Testing.enable!
   end
 end 
 

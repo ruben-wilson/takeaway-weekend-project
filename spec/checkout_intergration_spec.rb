@@ -15,5 +15,5 @@ RSpec.describe "intergration tests" do
     checkout.input_menu(meal4)
     checkout.input_menu(meal5)
     expect(checkout.menu).to eq "chicken and rice: £11.11, suasage and mash: £8.75, beans on toast: £19, steak and chips: £8.5, vegan stuff: £0.50"
-  end 
+  end
 end 

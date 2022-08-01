@@ -1,3 +1,5 @@
+require 'sendSms'
+
 class CheckOut
   def initialize 
     @menu = []
@@ -53,6 +55,12 @@ class CheckOut
       return "no items added to your basket"
     else
       return output.join(", ")
-    end  
+    end
   end 
+    
+    def time_of_arrival
+      message = sendSms.new
+      message.send 
+    end 
+  
 end 

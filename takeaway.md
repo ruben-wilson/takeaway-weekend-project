@@ -54,6 +54,9 @@ class CheckOut
   def receipt
    #@basket is an array of meals created by add_to_basket
    #returns dishes from basket with discription + price 
+  end
+  def time_of_arrival(number)#=> number is an interger representing users phone numbers
+    #sends out an sms to users phone number
   end 
 end 
 
@@ -206,6 +209,16 @@ checkout.remove_from_basket(meal2)
 checkout.add_to_basket(meal2)
 checkout.basket #=> "chicken and rice, sausage and mash"
 
+#it sends message to user after recipet has been called 
+checkout = CheckOut.new
+meal = Meal.new("chicken and rice", "11.11")
+meal2 = Meal.new("suasage and mash", "8.75")
+checkout.input_menu(meal)
+checkout.input_menu(meal2)
+checkout.add_to_basket(meal)
+checkout.add_to_basket(meal2)
+expect(checkout.receipt) #=> "chicken and rice: £11.11, suasage and mash: 8.75"
+expect(checkout.time_of_arrival) #=> "your food is coming at 22:55" 
 
 
 ```
@@ -286,3 +299,20 @@ refactor to implement the behavior._
 
 
 ## 7. test edge cases in integration test
+
+## 8. improvements + new features 
+
+- add in text feature using twilo 
+
+```ruby 
+#6 receipt correctly outputs basket descriptions and prices of meal instances  
+checkout = CheckOut.new
+checkout.input_menu(meal("some meal", "11"))
+checkout.input_menu(meal2("some more meals", "14"))
+checkout.add_to_basket(meal)
+checkout.add_to_basket(meal2)
+checkout.receipt #=> "some meal: £11, some more meals: £14"
+
+```
+
+- recipet should return total price 
