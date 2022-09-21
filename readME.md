@@ -1,4 +1,4 @@
-# {{Diary}} Multi-Class Planned Design Recipe
+# multi-Class Design Recipe
 
 ## 1. Describe the Problem
 ```
@@ -22,13 +22,10 @@ _receipt to be outputted with total prices for dishes._
 ```
 ## 2. Design the Class System
 
-_Consider diagramming out the classes and their relationships. Take care to
-focus on the details you see as important, not everything. The diagram below
-uses asciiflow.com but you could also use excalidraw.com, draw.io, or miro.com_
 
 ![alt text](https://github.com/ruben-wilson/takeaway-weekend-project/blob/main/classDiagram.png)
 
-_Also design the interface of each class in more detail._
+
 
 ```ruby
 class CheckOut
@@ -73,10 +70,6 @@ end
 ```
 
 ## 3. Create Examples as Integration Tests
-
-_Create examples of the classes being used together in different situations and
-combinations that reflect the ways in which the system will be used._
-
 ```ruby
 # add meals to class during initalize 
 checkout = CheckOut.new
