@@ -25,10 +25,8 @@ _receipt to be outputted with total prices for dishes._
 _Consider diagramming out the classes and their relationships. Take care to
 focus on the details you see as important, not everything. The diagram below
 uses asciiflow.com but you could also use excalidraw.com, draw.io, or miro.com_
-```
-https://lucid.app/lucidchart/5cb9dce1-116f-4a25-be6a-d2786b781958/edit?view_items=kcxCQsQATKkF%2CgfxCe5rrHJzU%2CCfJCOB1YsGSo%2Ce9wCcXfMwfsA%2CefJC4mkqEBjX&invitationId=inv_240589f9-253f-4420-a981-44c7aa7aa3aa#
-                             
-```
+
+![alt text](https://github.com/ruben-wilson/takeaway-weekend-project/blob/main/classDiagram.png)
 
 _Also design the interface of each class in more detail._
 
